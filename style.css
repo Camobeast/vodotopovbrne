@@ -360,6 +360,7 @@ h4 {
   @media (max-width: 960px) {
     header {
       padding: 10px;
+      background: #202330;
     }
 
     .logo-line {
