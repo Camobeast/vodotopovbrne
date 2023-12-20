@@ -1,6 +1,6 @@
 # vodotopovbrne
 
-## Welcome to the GitHub repository for VodoTopoVBrne.cz – a plumbing company website developed with HTML, CSS, and JavaScript.
+## Welcome to the GitHub repository for www.vodotopovbrne.cz – a plumbing company website developed with HTML, CSS, and JavaScript.
 
 ## Overview
 This project showcases a modern and professional website for a plumbing company based in Brno, Czech Republic. It features a sleek dark theme, responsive design, and incorporates interactive elements to enhance user experience.
