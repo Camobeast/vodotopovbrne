@@ -10,10 +10,10 @@ body {
 }
 
 header {
-    background: url(bg_mb.jpg) no-repeat;
+    background: url(images/bg_ai6.png) no-repeat;
     background-size: cover;
-    background-position: 0px 58%;
-    color: #F2F2F2;
+    background-position: center;
+    color: #202330;
     text-align: center;
     padding: 6em 100px; /* old 1.5rem */
   }
@@ -43,8 +43,8 @@ header {
 
 header p {
   font-size: 1.3rem;
-  margin-top: 20px;
-  margin-bottom: 30px;
+  margin-top: 5px;
+  margin-bottom: 0px;
 }
 
 .logo {
@@ -59,6 +59,7 @@ h1 {
     position: relative;
     margin: auto;
     left: 60px;
+    padding-top: 20px;
 }
 
 h2 {
@@ -224,7 +225,37 @@ h4 {
     margin-bottom: 10px;
   }
   
-  
+  .carousel {
+    position: relative;
+    max-width: 600px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.carousel-images img {
+    width: 100%;
+    display: none;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+
   .contact {
     display: flex;
   }
@@ -249,7 +280,6 @@ h4 {
     list-style-type: none;
     display: flex;
     justify-content: center;
-    margin-top: 10px;
   }
   
   nav ul li {
@@ -258,14 +288,14 @@ h4 {
   }
   
   nav a {
-    color: #F2F2F2;
+    color: #202330;
     text-decoration: none;
     font-size: 1.2rem;
     margin: 0 15px;
   }
   
   nav a:hover {
-    border-bottom: 2px solid #fff;
+    border-bottom: 2px solid #202330;
   }
   
   section {
@@ -352,8 +382,39 @@ h4 {
       margin: 20px;
     }
 
+    #gallery {
+      margin: 20px;
+    }
+
     #contact {
       margin: 20px;
+    }
+  }
+
+  @media (max-width: 1790px) {
+    .logo-line {
+      margin-top: 150px;
+    }
+
+    header p {
+      margin-top: 80px;
+      margin-bottom: 10px;
+    }
+
+    nav, header p {
+      background-color: #edf5ee;
+      border-radius: 10px;
+      border: solid 1px black;
+      width: 60%;
+      position: relative;
+      left: 20%;
+    }
+  }
+
+  @media (max-width: 1400px) {
+    .cta-button {
+      position: relative;
+      right: -70px;
     }
   }
 
@@ -361,10 +422,16 @@ h4 {
     header {
       padding: 10px;
       background: #202330;
+      color: #F2F2F2;
     }
 
     .logo-line {
       flex-direction: column;
+    }
+
+    .cta-button {
+      position: initial;
+      right: 0;
     }
 
     h1 {
@@ -374,8 +441,18 @@ h4 {
       left: 0;
     }
 
+    header p {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
     nav a {
       margin: 0 5px;
+      color: #F2F2F2;
+    }
+
+    nav a:hover {
+      border-bottom: 2px solid #F2F2F2;
     }
 
     nav ul li {
