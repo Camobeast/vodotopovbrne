@@ -5,7 +5,7 @@
 ## Overview
 This project showcases a modern and professional website for a plumbing company based in Brno, Czech Republic. It features a sleek dark theme, responsive design, and incorporates interactive elements to enhance user experience.
 
-!["A screenshot of the landing page of vodotopovbrne.cz"](screenshot.png)
+!["A screenshot of the landing page of vodotopovbrne.cz"](Images/screenshot.png)
 
 ## Key Features
 **Dark Theme:** The website employs a visually appealing dark theme for a modern and sophisticated look.
