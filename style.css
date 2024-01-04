@@ -48,8 +48,8 @@ header p {
 }
 
 .logo {
-  width: 60px;
-  height: 60px;
+  width: 80px;
+  height: 80px;
   border-radius: 50%;
 }
 
@@ -415,6 +415,11 @@ h4 {
     .cta-button {
       position: relative;
       right: -70px;
+    }
+
+    .logo {
+      width: 60px;
+      height: 60px;
     }
   }
 
