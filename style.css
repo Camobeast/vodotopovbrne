@@ -374,19 +374,7 @@ h4 {
       padding: 5px;
     }
 
-    #sluzby {
-      margin: 20px;
-    }
-
-    #o-nas {
-      margin: 20px;
-    }
-
-    #gallery {
-      margin: 20px;
-    }
-
-    #contact {
+    #sluzby, #o-nas, #gallery, #contact {
       margin: 20px;
     }
   }
@@ -429,9 +417,10 @@ h4 {
       background: #202330;
       color: #F2F2F2;
     }
-
+    
     .logo-line {
       flex-direction: column;
+      margin-top: 20px;
     }
 
     .cta-button {
@@ -449,6 +438,12 @@ h4 {
     header p {
       margin-top: 20px;
       margin-bottom: 20px;
+      background-color: none;
+    }
+
+    nav, header p {
+      background-color: #202330;
+      border: none;
     }
 
     nav a {
@@ -512,15 +507,7 @@ h4 {
       padding: 5px;
     }
 
-    #sluzby {
-      margin: 10px;
-    }
-
-    #o-nas {
-      margin: 10px;
-    }
-
-    #contact {
+    #sluzby, #o-nas, #gallery, #contact {
       margin: 10px;
     }
 
