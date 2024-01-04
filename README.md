@@ -24,4 +24,4 @@ Contributions are welcome! If you have suggestions, improvements, or bug fixes, 
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-## Thank you for checking out VodoTopoVBrne.cz!
+## Thank you for checking out vodotopovbrne.cz!
