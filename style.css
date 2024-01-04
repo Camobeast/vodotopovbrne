@@ -444,10 +444,14 @@ h4 {
     nav, header p {
       background-color: #202330;
       border: none;
+      padding: 0 5px;
+      width: auto;
+      left: 0;
     }
 
     nav a {
       margin: 0 5px;
+      font-size: 1em;
       color: #F2F2F2;
     }
 
