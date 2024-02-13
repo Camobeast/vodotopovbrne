@@ -5,6 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get POST data
     $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
+    $phone = isset($_POST['phone']) ? trim($_POST['phone']) : '';
     $messageText = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
 
     // Validate form fields
@@ -41,6 +42,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <tr>
               <th>Email</th><td>$email</td>
             </tr>
+            <tr>
+            " . (!empty($phone) ? "<th>Tel. číslo:</th>" : "") . "" . (!empty($phone) ? "<td>$phone</td>" : "") . "
             <tr>
               <th>Zpráva</th><td>$messageText</td>
             </tr>
