@@ -5,7 +5,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Get POST data
     $name = isset($_POST['name']) ? strip_tags(trim($_POST['name'])) : '';
     $email = isset($_POST['email']) ? trim($_POST['email']) : '';
-    $message = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
+    $messageText = isset($_POST['message']) ? strip_tags(trim($_POST['message'])) : '';
 
     // Validate form fields
     if (empty($name)) {
@@ -18,20 +18,46 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $errors[] = 'Vyplňte prosím platný email';
     }
 
-    if (empty($message)) {
+    if (empty($messageText)) {
         $errors[] = 'Pole zpráva je prázdné';
     }
 
     // If no errors, send email
     if (empty($errors)) {
-        // Recipient email address (replace with your own)
         $recipient = "vodotopovbrne@seznam.cz";
+        $subject = "Nová zpráva od: $name"; // Include the sender's name in the subject
 
+        // Format message as HTML
+        $message = "
+        <html>
+        <head>
+          <title>Nová zpráva od $name</title>
+        </head>
+        <body>
+          <table>
+            <tr>
+              <th>Jméno</th><td>$name</td>
+            </tr>
+            <tr>
+              <th>Email</th><td>$email</td>
+            </tr>
+            <tr>
+              <th>Zpráva</th><td>$messageText</td>
+            </tr>
+          </table>
+        </body>
+        </html>
+        ";
+
+        // To send HTML mail, the Content-type header must be set
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" . "\r\n";
+        
         // Additional headers
-        $headers = "Odesílatel: $name <$email>";
+        $headers .= "From: $name <$email>" . "\r\n";
 
         // Send email
-        if (mail($recipient, $message, $headers)) {
+        if (mail($recipient, $subject, $message, $headers)) {
             echo "Email odeslán úspěšně.";
         } else {
             echo "Při odesílání se vyskytla chyba, zkuste to prosím znovu.";
